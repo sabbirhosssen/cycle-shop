@@ -1,0 +1,12 @@
+.nav_bg {
+  background: rgb(97, 84, 84);
+}
+.hover {
+  color: rgb(250 62 44);
+  font-size: 25px;
+}
+.cent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
