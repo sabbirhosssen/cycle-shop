@@ -12,7 +12,7 @@ const Header = () => {
             <Container >
             <Navbar collapseOnSelect expand="lg"  className='Hover'>
   <Container>
-  <Navbar.Brand as={Link} to="/" className='hover'>Cycle Shop</Navbar.Brand>
+  <Navbar.Brand as={Link} to="/" className='hover fs-2'>Cycle Shop</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mx-auto">
@@ -27,11 +27,11 @@ const Header = () => {
     </Nav> */}
     <Nav>
     {user?.email ?
-                            <Button onClick={logOut} className="hover bg-transparent m-2" >Logout</Button> :
-                            <Nav.Link as={Link} to="/login"><RiUserLine/></Nav.Link>
+                            <Button onClick={logOut} className="hover bg-transparent mt-3" >Logout</Button> :
+                            <Nav.Link as={Link} to="/login" className='ps-2 fs-3'><RiUserLine/></Nav.Link>
                         }  
                         {user?.email ?
-                              <Image  className=" rounded-circle cent" width="50px" height="50px" src= {user.photoURL}  ></Image>:<Outlet/>
+                              <Image  className=" rounded-circle mt-3" width="50px" height="50px" src= {user.photoURL}  ></Image>:<Outlet/>
 
                         }
                          <Nav.Link as={Link} to="/card" className='ps-2 fs-3'><AiOutlineShopping/></Nav.Link>

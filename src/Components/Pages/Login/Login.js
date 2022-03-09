@@ -18,9 +18,9 @@ const Login = () => {
     }
     return (
         <div>
-            <div  className='  back_logo p-5 '>
+            <div  className='  back_logo mx-auto p-5 w-50 '>
             
-            <div className="back  w-25 border border-2 p-5 mt-5 mb-5 rounded " >
+            <div className="back   border border-2 p-5 mt-5 mb-5 rounded " >
                 <Form className=''> 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label className="fs-3 text-info">Log in</Form.Label>

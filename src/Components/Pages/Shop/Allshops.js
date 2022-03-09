@@ -1,14 +1,8 @@
 import React from 'react';
 import { Card, Col, Image } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
 
-const Shops = ({shop}) => {
-    const {img,title,key,price}=shop;
-    const navigate =useNavigate();
-    const handleClickShops=()=>{
-      navigate(`/${key}`)
-    }
-
+const Allshops = ({shop}) => {
+    const {title ,img}=shop
     return (
         <div>
              <Col>
@@ -27,11 +21,11 @@ const Shops = ({shop}) => {
                       <AiOutlineStar className='text-white'/>
                     </div> */}
                     <Card.Text>
-                      Delivery Price: {price} tk
+                      Delivery Price :tk
                     </Card.Text>
     
                   </Card.Body>
-                  <Link to={`/${key}`} > <button onClick={()=>handleClickShops(key)} className='border-0 text-white btn btn-outline-warning bg_card mb-1 '>Add To Cart</button> </Link>
+                  {/* <Link to={`/books/${_id}`} > <button onClick={()=>handleClickBooks(_id)} className='border-0 text-white btn btn-outline-warning bg_card mb-1 '>Add To Cart</button> </Link> */}
                  
                 </Card>
                 </Col>
@@ -39,4 +33,4 @@ const Shops = ({shop}) => {
     );
 };
 
-export default Shops;
+export default Allshops;
