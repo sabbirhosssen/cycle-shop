@@ -1,0 +1,29 @@
+.add_book form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.add_book form input {
+  /* background: gray; */
+  /* color: rgb(223, 71, 71); */
+  font-size: 24px;
+  border-radius: 17px;
+  margin-top: 1%;
+  padding: 1%;
+  width: 55%;
+}
+.add_book form textarea {
+  width: 55%;
+  margin-top: 1%;
+  padding: 1%;
+  border-radius: 17px;
+}
+
+.submit {
+  color: rgb(204, 69, 69);
+}
+.submit:hover {
+  background-color: rgba(255, 255, 0, 0.486);
+  color: white;
+}

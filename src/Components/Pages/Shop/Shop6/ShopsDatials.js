@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { Image } from 'react-bootstrap';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const ShopsDatials = () => {
     const params =useParams();
     // console.log(params.shopId);
-    
+    const navigate =useNavigate();
     const [cycle, setCycle]=useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/allcycle/${params.shopId}`)
+        fetch(`http://localhost:5000/allCycle/${params.Id}`)
         .then(res=>res.json())
         .then(data=>setCycle(data))
     },[])
     // console.log(cycle);
+    const handleOrderClick =()=>{
+        const rediret_ui =`/ordernow/${cycle._id}`
+        navigate(rediret_ui)
+        
+    }
     return (
         <div>
 
@@ -27,11 +32,20 @@ const ShopsDatials = () => {
                    <h3 className='text-success'>Type : {cycle.type} </h3>
                    <h3 className='text-success'>Price : {cycle.price} </h3>
 
-                   <Link to='/h'  className=''> <button  className='border-0 text-white btn btn-outline-black bg-success mb-1 mx-auto mt-3' >Add To Cart</button> </Link>
+                   <Link to={`/ordernow/${cycle._id}`}  className=''> <button onClick={()=>handleOrderClick(cycle._id)}  className='border-0 text-white btn btn-outline-black bg-success mb-1 mx-auto mt-3' >Buy Now</button> </Link>
                 </div>
+                
             </div>
-            {/* <h3>hello </h3> onClick={()=>handleClickShops(_id)}*/}
-        </div>
+             <div className='text-white m-5 '>
+                 <h1 className='text-start text-success'>Description : <Link to={`/shop/${params.shopId}/description`  } className="text-duretion-none text-success">  Reivews
+                </Link></h1> 
+                 {cycle.description}
+             </div>
+
+        
+            
+            </div>
+       
     );
 };
 

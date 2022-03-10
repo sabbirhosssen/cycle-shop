@@ -19,7 +19,7 @@ const Addshop = () => {
         <div>
           
           <div className='m-5'>
-          <h3 className='text-center'>Add Cycle Shop Items</h3>
+          <h3 className='text-center text-white'>Add Cycle Shop Items</h3>
             <div className='add_book mx-auto'>
               <form onSubmit={handleSubmit(onSubmit)} className="" >
               <input  {...register("img")} placeholder="Image url" />

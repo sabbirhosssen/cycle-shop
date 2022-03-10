@@ -6,7 +6,7 @@ const Allshop = () => {
 
     const [shop,setShop]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/allcycle')
+        fetch('http://localhost:5000/allCycle')
         .then(res=>res.json())
         .then(data=>setShop(data))
     },[])

@@ -14,19 +14,17 @@ const Header = () => {
   <Navbar.Brand as={Link} to="/" className='text-success text-bold fs-2'>Cycle Shop</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="mx-auto">
+    <Nav className="ms-auto">
       <Nav.Link as={Link} to="/" className='hover text-white'>Home</Nav.Link>
       <Nav.Link as={Link} to="/shop" className='hover text-white'>Shop</Nav.Link>
       <Nav.Link as={Link} to="/news" className='hover text-white'>News</Nav.Link>
-      <Nav.Link as={Link} to="/pages" className='hover text-white' >Pages</Nav.Link>
+      {/* <Nav.Link as={Link} to="/pages" className='hover text-white' >Pages</Nav.Link> */}
     </Nav>
   
     <Nav>
+     
       {user?.email ?
-      <Nav.Link as={Link} to="/admin" className='hover mt-1 me-2 text-white '>Admin</Nav.Link>:<Outlet/>
-      }
-      {user?.email ?
-      <Nav.Link as={Link} to="/dashboard" className='hover mt-1 me-2 text-white '>Dashboard</Nav.Link>:<Outlet/>
+      <Nav.Link as={Link} to="dashboard/myorder" className='hover mt-1 me-2 text-white '>Dashboard</Nav.Link>:<Outlet/>
       }
     {user?.email ?
                             <Button onClick={logOut} className=" border-success hover bg-transparent mt-2 me-2 text-success" >Logout</Button> :
