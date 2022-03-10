@@ -16,7 +16,7 @@ const Allshops = ({shop}) => {
               <Col>
                <Card className=" bg-dark bg-gradient text-white  " style={{height:"455px"}}>
                    <Image width="100%" height="230px" src={img} ></Image>
-                   <Card.Body className='text-start ms-5 ps-5 '>
+                   <Card.Body className='text-start mx-auto '>
                     <Card.Text className=' text_card'>
                     <div className='d-inlineblock '>
                       <AiFillStar className='text-success'  />
@@ -34,7 +34,7 @@ const Allshops = ({shop}) => {
                     </Card.Text>
     
                   </Card.Body>
-                  <Link to={`/shop/${_id}`} > <button onClick={()=>handleClickShops(_id)} className='border-0 text-white btn btn-outline-warning bg_card mb-1 '>Add To Cart</button> </Link>
+                  <Link to={`/shop/${_id}`} > <button onClick={()=>handleClickShops(_id)} className='border-0 text-white btn btn-outline bg-success mb-1 ' >Add To Cart</button> </Link>
                  
                 </Card>
                 </Col>

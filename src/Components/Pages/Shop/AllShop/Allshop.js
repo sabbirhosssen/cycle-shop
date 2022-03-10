@@ -6,17 +6,17 @@ const Allshop = () => {
 
     const [shop,setShop]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/addCycle')
+        fetch('http://localhost:5000/allCycle')
         .then(res=>res.json())
         .then(data=>setShop(data))
     },[])
-    console.log(shop);
+    // console.log(shop);
     return (
         <div className='pt-5'>
               <h2 className='text-white '>All Shop</h2>
             <Row xs={2} md={4} className="g-4 p-5 h-100   m-0">
                 {
-                    shop.map(shop=><Allshops key={shop.key} shop={shop}/>)
+                    shop.map(shop=><Allshops key={shop._id} shop={shop}/>)
                 }
                 </Row>
         </div>
