@@ -8,7 +8,7 @@ const ShopsDatials = () => {
     
     const [cycle, setCycle]=useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/allCycle/${params.shopId}`)
+        fetch(`http://localhost:5000/allcycle/${params.shopId}`)
         .then(res=>res.json())
         .then(data=>setCycle(data))
     },[])

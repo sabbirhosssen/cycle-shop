@@ -5,7 +5,7 @@ import Shops from './Shops';
 const Shop = () => {
     const [shops,setShop]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/allCycle')
+        fetch('http://localhost:5000/allcycle')
         .then(res=>res.json())
         .then(data=>setShop(data))
     },[])
