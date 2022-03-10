@@ -1,37 +1,38 @@
 import React from 'react';
 import { Card, Col, Image } from 'react-bootstrap';
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { Link, useNavigate } from 'react-router-dom';
-
 const Shops = ({shop}) => {
-    const {img,title,key,price}=shop;
+    const {img,_id,price,cycle_name}=shop;
     const navigate =useNavigate();
     const handleClickShops=()=>{
-      navigate(`/${key}`)
+      navigate(`/${_id}`)
     }
 
     return (
         <div>
              <Col>
-               <Card className=" bg-dark bg-gradient text-white " style={{height:"660px"}}>
-                   <Image width="100%" height="390px" src={img} ></Image>
-                   <Card.Body className=' '>
+               <Card className=" bg-dark bg-gradient text-white  " style={{height:"455px"}}>
+                   <Image width="100%" height="230px" src={img} ></Image>
+                   <Card.Body className='text-start ms-5 ps-5 '>
                     <Card.Text className=' text_card'>
-                         <Card.Title>{title}</Card.Title>
-                      {/* <Card.Text>{writer}</Card.Text> */}
-                    </Card.Text>
-                    {/* <div className='d-inlineblock '>
+                    <div className='d-inlineblock '>
                       <AiFillStar className='text-success'  />
                       <AiFillStar className='text-success' />
                       <AiFillStar className='text-success' />
                       <AiFillStar className='text-success' />
                       <AiOutlineStar className='text-white'/>
-                    </div> */}
+                    </div>
+                    </Card.Text >
+                    <Card.Text className='text-success'>
+                    {cycle_name}
+                    </Card.Text>
                     <Card.Text>
-                      Delivery Price: {price} tk
+                      Price: {price} tk
                     </Card.Text>
     
                   </Card.Body>
-                  <Link to={`/${key}`} > <button onClick={()=>handleClickShops(key)} className='border-0 text-white btn btn-outline-warning bg_card mb-1 '>Add To Cart</button> </Link>
+                  <Link to={`/${_id}`} > <button onClick={()=>handleClickShops(_id)} className='border-0 text-white btn btn-outline-warning bg_card mb-1 '>Add To Cart</button> </Link>
                  
                 </Card>
                 </Col>

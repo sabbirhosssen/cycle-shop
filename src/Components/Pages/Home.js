@@ -1,7 +1,8 @@
 import React from 'react';
 import Bannar from './Bannar/Bannar';
 import Review from './Review/Review';
-import Shop from './Shop/Shop';
+import Shop from './Shop/Shop6/Shop';
+
 
 const Home = () => {
     return (

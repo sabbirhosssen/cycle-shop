@@ -3,7 +3,7 @@ import { Carousel, Image } from 'react-bootstrap';
 
 const Bannar = () => {
     return (
-        <div>
+        <div className='bg-white'>
              <Carousel variant="dark">
          
          <Carousel.Item>

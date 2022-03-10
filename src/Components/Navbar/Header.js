@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
-import { AiOutlineShopping } from "react-icons/ai";
 import { RiUserLine } from "react-icons/ri";
 import { Link, Outlet } from 'react-router-dom';
 import useAuth from '../../Hook/useAuth';
@@ -21,20 +20,20 @@ const Header = () => {
       <Nav.Link as={Link} to="/news" className='hover'>News</Nav.Link>
       <Nav.Link as={Link} to="/pages" className='hover'>Pages</Nav.Link>
     </Nav>
-    {/* <Nav>
-    <Nav.Link as={Link} to="/login"><RiUserLine/></Nav.Link>
-      <Nav.Link as={Link} to="/login"><AiOutlineShopping/></Nav.Link>
-    </Nav> */}
+  
     <Nav>
+      {user?.email ?
+      <Nav.Link as={Link} to="/dashboard" className='hover mt-2 me-3'>Dashboard</Nav.Link>:<Outlet/>
+      }
     {user?.email ?
-                            <Button onClick={logOut} className="hover bg-transparent mt-3" >Logout</Button> :
+                            <Button onClick={logOut} className="hover bg-transparent mt-2 me-2" >Logout</Button> :
                             <Nav.Link as={Link} to="/login" className='ps-2 fs-3'><RiUserLine/></Nav.Link>
                         }  
                         {user?.email ?
-                              <Image  className=" rounded-circle mt-3" width="50px" height="50px" src= {user.photoURL}  ></Image>:<Outlet/>
+                              <Image  className=" rounded-circle mt-2" width="50px" height="50px" src= {user.photoURL}  ></Image>:<Outlet/>
 
                         }
-                         <Nav.Link as={Link} to="/card" className='ps-2 fs-3'><AiOutlineShopping/></Nav.Link>
+                        
     </Nav>
   </Navbar.Collapse>
   </Container>
