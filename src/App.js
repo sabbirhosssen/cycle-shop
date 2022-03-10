@@ -1,13 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Dashboard from './Components/Dashboard/Dashboard';
+import Admin from './Components/Admin/Admin';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Navbar/Header';
 import Home from './Components/Pages/Home';
 import Login from './Components/Pages/Login/Login';
 import News from './Components/Pages/News/News';
 import Allshop from './Components/Pages/Shop/AllShop/Allshop';
-import AllShopDetails from './Components/Pages/Shop/AllShop/AllShopDetails';
 import ShopsDatials from './Components/Pages/Shop/Shop6/ShopsDatials';
 import AuthProvider from './Context/AuthProvider';
 
@@ -24,11 +23,10 @@ function App() {
        
         <Route path='/login' element={<Login/>} />
 
-        <Route path='/:shopId' element={<ShopsDatials/>} />
-        <Route path='/shop/:allId' element={<AllShopDetails/>} />
+        <Route path='shop/:shopId' element={<ShopsDatials/>} />
 
        
-        <Route path='/dashboard/*' element={<Dashboard/>} />
+        <Route path='/admin/*' element={<Admin/>} />
          
         
    

@@ -32,7 +32,7 @@ const Shops = ({shop}) => {
                     </Card.Text>
     
                   </Card.Body>
-                  <Link to={`/${_id}`} > <button onClick={()=>handleClickShops(_id)} className='border-0 text-white btn btn-outline-black bg-success mb-1 ' >Add To Cart</button> </Link>
+                  <Link to={`/shop/${_id}`} > <button onClick={()=>handleClickShops(_id)} className='border-0 text-white btn btn-outline-black bg-success mb-1 ' >Add To Cart</button> </Link>
                  
                 </Card>
                 </Col>
