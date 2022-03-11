@@ -19,18 +19,18 @@ const News = () => {
                />
                <NewsData
                key='2'
-               date="August 25, 2020"
-                img="https://cdn.shopify.com/s/files/1/0434/2431/7599/articles/blog-6.jpg?v=1598335505"
-                name="Change Gear on a Bicycle"
-                description="Cras sagittis sapien tellus, id lacinia nunc suscipit vitae. Integer eget lectus et diam lobortis laoreet vitae id nunc. Pellentesque..."
+               date="August 28, 2020"
+                img="https://cdn.shopify.com/s/files/1/0434/2431/7599/articles/blog-3_ceb63865-c406-4059-afc5-d459b78b9317_1024x1024_1_600x.jpg?v=1595492731"
+                name="A Brief History of Cycling"
+                description="Vestibulum at suscipit leo, nec dapibus risus. Donec quis interdum tellus. Aliquam fringilla metus risus, vitae dictum nulla laoreet quis.... "
                
                />
                <NewsData
                key='3'
                date="August 25, 2020"
-                img="https://cdn.shopify.com/s/files/1/0434/2431/7599/articles/blog-5.jpg?v=1598335478"
-                name="Gear Cycle with Disk Brake"
-                description="Maecenas a ipsum volutpat, pharetra massa non, facilisis dolor. Fusce sodales nibh maximus lacinia iaculis. Donec quis malesuada lectus. Donec..."
+                img="https://cdn.shopify.com/s/files/1/0434/2431/7599/articles/blog-2_1c1fc410-e356-452d-9f29-179f2d438e62_1024x1024_1.jpg?v=1595492718"
+                name="Different Types of Bicycle Brakes"
+                description="Lectus nulla at volutpat diam ut venenatis. Eu non diam phasellus vestibulum lorem sed risus ultricies ..."
                
                />
                 </Row>

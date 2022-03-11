@@ -8,7 +8,19 @@ const MyOrder = () => {
         .then(res=>res.json())
         .then(data=>setOrder(data))
     },[])
-    const handleDeleteOrder =()=>{
+    const handleDeleteOrder =(id)=>{
+        const url = `http://localhost:5000/allOrder/${id}`
+        fetch(url, {
+            method:'DELETE'
+        }).then(res=>res.json()).then(data=>{
+            console.log(data)
+            if (data.deletedCount) {
+                alert('deleted')
+                const remmaining = order.filter(shop=>shop._id !== id)
+                setOrder(remmaining)
+                
+            }
+        })
         console.log("hi");
     }
     return (
@@ -18,7 +30,7 @@ const MyOrder = () => {
             {
                 order.map( order => <div key={order._id} className="d-block m-5 ">
                      <div className='d-flex  justify-content-space-between   rounded-3 bg-secondary  w-100 overflow-hidden'>
-                         <div className='text-white mx-auto text-start'>
+                         <div className='text-white p-5 text-start'>
                          <h4 className='fs-3'>Name : {order.name}</h4>
                          <h4 className='fs-4'> Email :{order.email}</h4>
                          <h4 className='fs-4'> Number :{order.Number}</h4>
