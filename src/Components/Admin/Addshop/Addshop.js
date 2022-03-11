@@ -6,7 +6,7 @@ const Addshop = () => {
     const { register, handleSubmit ,reset} = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/allCycle' ,data)
+        axios.post('https://evening-ocean-40382.herokuapp.com/allCycle' ,data)
         .then(res =>{
             if(res.data.insertedId){
                 alert("Added successfully")

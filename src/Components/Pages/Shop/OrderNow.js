@@ -12,7 +12,7 @@ const OrderNow = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/allOrder' ,data)
+        axios.post('https://evening-ocean-40382.herokuapp.com/allOrder' ,data)
         .then(res =>{
             if(res.data.insertedId){
                 alert("Buy Product successfully",navigate('/dashboard/myorder'))

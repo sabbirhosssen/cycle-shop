@@ -10,7 +10,7 @@ const ReviewNow = () => {
     const { register, handleSubmit ,reset} = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/allReview' ,data)
+        axios.post('https://evening-ocean-40382.herokuapp.com/allReview' ,data)
         .then(res =>{
             if(res.data.insertedId){
                 alert("Added successfully")

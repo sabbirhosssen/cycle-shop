@@ -8,12 +8,11 @@ const Login = () => {
     const {googlelogin}=useAuth()
     const navigate =useNavigate();
     const location =useLocation();
-    const redirect_ui =location?.state?.Form||'/';
+    const redirect_uri = location?.state?.from || '/';
     const handleGoogleLogIn =(e)=>{
         e.preventDefault();
-        googlelogin()
-        .then(result=>{
-                navigate(redirect_ui)
+        googlelogin().then(result=>{
+                navigate(redirect_uri)
         })
     }
     return (

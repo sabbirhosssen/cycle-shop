@@ -10,6 +10,7 @@ import News from './Components/Pages/News/News';
 import Allshop from './Components/Pages/Shop/AllShop/Allshop';
 import OrderNow from './Components/Pages/Shop/OrderNow';
 import ShopsDatials from './Components/Pages/Shop/Shop6/ShopsDatials';
+import PrivateRoute from './Components/Private/PrivateRoute';
 import AuthProvider from './Context/AuthProvider';
 
 function App() {
@@ -21,20 +22,29 @@ function App() {
       {/* <PrivateRoute></PrivateRoute> */}
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/home' element={<Home/>}/>
         <Route path='/shop' element={
           
         <Allshop/>
         }/>
-        <Route path='/news' element={<News/> }/>
+        <Route path='/news' element={<News/>}/>
 
-       
+      
         <Route path='/login' element={<Login/>} />
 
         <Route path='shop/:Id' element={<ShopsDatials/>} />
-        <Route path='/ordernow/:Id' element={<OrderNow/>}></Route>
+        <Route path='/ordernow/:Id' element={
+          <PrivateRoute>
+            <OrderNow/>
+          </PrivateRoute>
+        }></Route>
        
         <Route path='/admin/*' element={<Admin/>} />
-        <Route path='/dashboard/*' element={<Dashboard/>} />
+        <Route path='/dashboard/*' element={
+          <PrivateRoute>
+            <Dashboard/>
+          </PrivateRoute>
+        } />
          
         
    

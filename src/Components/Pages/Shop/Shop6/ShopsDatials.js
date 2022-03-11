@@ -8,7 +8,7 @@ const ShopsDatials = () => {
     const navigate =useNavigate();
     const [cycle, setCycle]=useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/allCycle/${params.Id}`)
+        fetch(`https://evening-ocean-40382.herokuapp.com/allCycle/${params.Id}`)
         .then(res=>res.json())
         .then(data=>setCycle(data))
     },[])

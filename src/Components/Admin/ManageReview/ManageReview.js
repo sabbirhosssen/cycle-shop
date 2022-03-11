@@ -4,13 +4,13 @@ import { Button } from 'react-bootstrap';
 const ManageReview = () => {
     const [review,setReview]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/allReview')
+        fetch('https://evening-ocean-40382.herokuapp.com/allReview')
         .then(res=>res.json())
         .then(data=>setReview(data))
     },[])
 
 const handleDeleteReview=(id)=>{
-    const url = `http://localhost:5000/allReview/${id}`
+    const url = `https://evening-ocean-40382.herokuapp.com/allReview/${id}`
     fetch(url, {
         method:'DELETE'
     }).then(res=>res.json()).then(data=>{

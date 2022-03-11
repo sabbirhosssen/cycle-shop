@@ -4,12 +4,12 @@ import { Button } from 'react-bootstrap';
 const MyOrder = () => {
     const [order , setOrder]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/allOrder')
+        fetch('https://evening-ocean-40382.herokuapp.com/allOrder')
         .then(res=>res.json())
         .then(data=>setOrder(data))
     },[])
     const handleDeleteOrder =(id)=>{
-        const url = `http://localhost:5000/allOrder/${id}`
+        const url = `https://evening-ocean-40382.herokuapp.com/allOrder/${id}`
         fetch(url, {
             method:'DELETE'
         }).then(res=>res.json()).then(data=>{

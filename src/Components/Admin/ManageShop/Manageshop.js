@@ -4,14 +4,14 @@ import { Button, Image } from 'react-bootstrap';
 const Manageshop = () => {
     const [shop,setShop]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/allCycle')
+        fetch('https://evening-ocean-40382.herokuapp.com/allCycle')
         .then(res=>res.json())
         .then(data=>setShop(data))
         
     },[])
     // console.log(shop);
     const handleDelete=(id)=>{
-        const url = `http://localhost:5000/allCycle/${id}`
+        const url = `https://evening-ocean-40382.herokuapp.com/allCycle/${id}`
         fetch(url, {
             method:'DELETE'
         }).then(res=>res.json()).then(data=>{
