@@ -6,7 +6,7 @@ import NewsData from './NewsData';
 const News = () => {
     return (
         <div className='mt-5'>
-          <h1 className='text-success fs-1'>Our Latest News</h1>  
+          <h1 className='text-white fs-1'>Our Latest News</h1>  
 
           <Row xs={1} md={3} className="g-4 p-5 h-100  m-5 m-0 border-0 rounded">
                <NewsData

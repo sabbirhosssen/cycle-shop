@@ -24,7 +24,7 @@ const Shops = ({shop}) => {
                       <AiOutlineStar className='text-white'/>
                     </div>
                     </Card.Text >
-                    <Card.Text className='text-success'>
+                    <Card.Text className='text-white'>
                     {cycle_name}
                     </Card.Text>
                     <Card.Text>

@@ -14,7 +14,7 @@ const Header = () => {
   <Navbar.Brand as={Link} to="/" className='text-white text-bold fs-2'>Cycle Shop</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="mx-auto">
+    <Nav className="ms-auto">
       <Nav.Link as={Link} to="/" className='hover text-white'>Home</Nav.Link>
       <Nav.Link as={Link} to="/shop" className='hover text-white'>Shop</Nav.Link>
       <Nav.Link as={Link} to="/news" className='hover text-white'>News</Nav.Link>
@@ -27,7 +27,7 @@ const Header = () => {
       <Nav.Link as={Link} to="dashboard/myorder" className='hover mt-1 me-2 text-white '>Dashboard</Nav.Link>
     {user?.email ?
                             <Button onClick={logOut} className="border-0  bg-success hover  mt-2 me-2 text-white" >Logout</Button> :
-                            <Nav.Link as={Link} to="/login" className='ps-2 fs-3'><RiUserLine/></Nav.Link>
+                            <Nav.Link as={Link} to="/login" className='ps-2 fs-3 '><RiUserLine className='text-green'/></Nav.Link>
                         }  
                         {user?.email ?
                               <Image  className=" rounded-circle mt-2" width="50px" height="50px" src= {user.photoURL}  ></Image>:<Outlet/>

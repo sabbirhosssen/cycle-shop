@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAuth from '../../../Hook/useAuth';
@@ -10,16 +10,28 @@ const OrderNow = () => {
     const params = useParams()
     const navigate = useNavigate()
     const { register, handleSubmit,reset } = useForm();
+const [set , setData]=useState([])
+useEffect(()=>{
+ fetch(`https://evening-ocean-40382.herokuapp.com/allCycle/${params.Id}`)
+ .then(res=>res.json())
+ .then(data=>{
+    setData(data)
+    
+ })
+},[])
+console.log(set?.cycle_name)
     const onSubmit = data => {
         console.log(data);
         axios.post('https://evening-ocean-40382.herokuapp.com/allOrder' ,data)
         .then(res =>{
+            
             if(res.data.insertedId){
                 alert("Buy Product successfully",navigate('/dashboard/myorder'))
-                reset();
+                reset(data);
             }
             console.log(res)
         })
+        
     }
     return (
         <div>
@@ -33,14 +45,9 @@ const OrderNow = () => {
                     <input {...register("email", { required: true, maxLength: 80 })} placeholder="Name" className="" defaultValue={user?.email}></input>
                     <input type="number" {...register("Number", { required: true })} placeholder="Phone Number"
                         className=" my-2" />
-                    <textarea {...register("address")} placeholder="Full Address"
+                    <textarea {...register("Address")} placeholder="Full Address"
                         className=" my-2" />
 
-                   
-
-                  
-             
-             
               <input type="submit"  className='submit' />
               </form>
             </div>
