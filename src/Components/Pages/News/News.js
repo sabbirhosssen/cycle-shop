@@ -5,11 +5,15 @@ import NewsData from './NewsData';
 
 const News = () => {
     return (
-        <div className='mt-5'>
+        <div className='mt-5' 
+        data-aos="zoom-in-down" 
+        data-aos-offset="100"  
+        data-aos-duration="1000">
           <h1 className='text-white fs-1'>Our Latest News</h1>  
 
           <Row xs={1} md={3} className="g-4 p-5 h-100  m-5 m-0 border-0 rounded">
                <NewsData
+              
                key='1'
                date="August 25, 2020"
                 img="https://cdn.shopify.com/s/files/1/0434/2431/7599/articles/blog-7.jpg?v=1598335518"

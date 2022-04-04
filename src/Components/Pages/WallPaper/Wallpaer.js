@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './WallPaper.css';
 const Wallpaer = () => {
     return (
-        <div className='bg-white bg-wall'>
+        <div className='bg-white bg-wall' >
          <div className='text-start p-5 pt-5 ps-5'> 
              <hr className=' text-success border border-success  bg-sucess p-1 w-25' />
              <h1 className='text-success'>Innovating to reimagine riding bicycle</h1>

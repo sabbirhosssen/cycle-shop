@@ -4,10 +4,14 @@ import { MdOutlineDateRange, MdOutlineInsertComment } from "react-icons/md";
 
 const NewsData = ( {img,description,name,date}) => {
     return (
-        <div>
+        <div > 
               <Col>
                <Card className=" bg-dark bg-gradient text-white  " style={{height:"480px"}}>
-                   <Image width="100%" height="230px" src={img} ></Image>
+                   <Image width="100%" height="230px" src={img} 
+                    data-aos="zoom-in"
+                    data-aos-duration="2000"
+                    data-aos-easing="ease-out-cubic"
+                    ></Image>
                    <Card.Body className='text-start mx-auto'>
                     <Card.Text className=' text_card'>
                     <MdOutlineDateRange/> {date} || <MdOutlineInsertComment/>1 Comments

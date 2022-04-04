@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import ScrollToTop from "react-scroll-to-top";
 import './App.css';
 import Admin from './Components/Admin/Admin';
 import Dashboard from './Components/Dashboard/Dashboard';
@@ -12,11 +13,10 @@ import OrderNow from './Components/Pages/Shop/OrderNow';
 import ShopsDatials from './Components/Pages/Shop/Shop6/ShopsDatials';
 import PrivateRoute from './Components/Private/PrivateRoute';
 import AuthProvider from './Context/AuthProvider';
-
 function App() {
   return (
     <div className="App ">
-      
+       <ScrollToTop smooth color="rgb(0, 128, 0)" />
       <AuthProvider>
       <Header/>
       {/* <PrivateRoute></PrivateRoute> */}
