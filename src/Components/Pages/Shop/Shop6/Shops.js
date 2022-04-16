@@ -11,9 +11,9 @@ const Shops = ({shop}) => {
 
     return (
         <div 
-    data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="1500"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1500"
         >
              <Col>
                <Card className=" bg-dark bg-gradient text-white  " style={{height:"455px"}}>
