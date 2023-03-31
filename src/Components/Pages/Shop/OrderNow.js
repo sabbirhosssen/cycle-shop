@@ -11,18 +11,18 @@ const OrderNow = () => {
     const navigate = useNavigate()
     const { register, handleSubmit,reset } = useForm();
 const [set , setData]=useState([])
-useEffect(()=>{
- fetch(`https://evening-ocean-40382.herokuapp.com/allCycle/${params.Id}`)
- .then(res=>res.json())
- .then(data=>{
-    setData(data)
+    useEffect(() => {
+        fetch(`https://cycle-shop-server-sabbirhosssen.vercel.app/allCycle${params.Id}`)
+            .then(res => res.json())
+            .then(data => {
+                setData(data)
     
- })
-},[])
+            })
+    }, []);
 console.log(set?.cycle_name)
     const onSubmit = data => {
         console.log(data);
-        axios.post('https://evening-ocean-40382.herokuapp.com/allOrder' ,data)
+        axios.post('https://cycle-shop-server-sabbirhosssen.vercel.app/allOrder' ,data)
         .then(res =>{
             
             if(res.data.insertedId){

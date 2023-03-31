@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Form, Image } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../../Hook/useAuth';
+import './Login.css';
 
 const Login = () => {
     // const {user,googlelogin}=useFirebase()
@@ -16,10 +17,10 @@ const Login = () => {
         })
     }
     return (
-        <div>
-            <div  className='  back_logo mx-auto p-5 w-50 '>
+        <div >
+            <div   className='res-1 back_logo d-flex justify-content-center   '>
             
-            <div className="back   border border-2 p-5 mt-5 mb-5 rounded " >
+            <div  className="  back   border border-2 p-5 mt-5 mb-5 rounded " >
                 <Form className=''> 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label className="fs-3 text-info">Log in</Form.Label>

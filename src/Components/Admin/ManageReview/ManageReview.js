@@ -10,7 +10,7 @@ const ManageReview = () => {
     },[])
 
 const handleDeleteReview=(id)=>{
-    const url = `https://evening-ocean-40382.herokuapp.com/allReview/${id}`
+    const url = `https://cycle-shop-server-sabbirhosssen.vercel.app/allReview/${id}`
     fetch(url, {
         method:'DELETE'
     }).then(res=>res.json()).then(data=>{

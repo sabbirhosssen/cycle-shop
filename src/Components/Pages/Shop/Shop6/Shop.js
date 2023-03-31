@@ -5,7 +5,7 @@ import Shops from './Shops';
 const Shop = () => {
     const [shops,setShop]=useState([]);
     useEffect(()=>{
-        fetch('https://evening-ocean-40382.herokuapp.com/allCycle')
+        fetch('https://cycle-shop-server-sabbirhosssen.vercel.app/allCycle')
         .then(res=>res.json())
         .then(data=>setShop(data))
     },[])
